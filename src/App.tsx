@@ -1,7 +1,10 @@
+import { Avatar } from "./components/atoms";
+
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <Avatar/>
     </div>
   );
 }

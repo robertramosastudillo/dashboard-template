@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+@mixin mq($size) {
+  @if $size == ll {
+    @media (min-width: v.$ll) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: v.$lg) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: v.$md) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (min-width: v.$sm) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media (min-width: v.$xs) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}

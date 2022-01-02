@@ -1,11 +1,8 @@
-import { Avatar } from "./components/atoms";
-
+import { Dashboard } from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <Avatar/>
-    </div>
+      <Dashboard/>
   );
 }
 

@@ -1,0 +1,14 @@
+@use "../../../shared/sass" as m;
+
+.dashboard__layout {
+    display: flex;
+    flex-direction: column;
+
+    @include m.mq(md) {
+        flex-direction: row-reverse;
+    }
+
+    @include m.mq(lg) {
+        flex-direction: row-reverse;
+    }
+}

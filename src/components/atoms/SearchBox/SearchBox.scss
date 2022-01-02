@@ -1,0 +1,85 @@
+@use "../../../shared/sass" as m;
+
+.searchbox {
+  position: relative;
+  height: 3.2rem;
+  width: 100%;
+  margin: 0 2rem 0 0;
+
+  @include m.mq(md) {
+    height: 3.6rem;
+    width: 28rem;
+  }
+
+  @include m.mq(lg) {
+    height: 4.4rem;
+    width: 34rem;
+    margin: 0px 6rem;
+  }
+}
+
+.searchbox-input {
+  width: 2rem;
+  height: 100%;
+  opacity: 0;
+  background-color: #fafafa;
+  border: 1px solid #b2b2b2;
+  border-radius: 0.4rem;
+  padding: 0rem 0.8rem 0rem 3.4rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #303030;
+  font-size: 14px;
+  outline: none;
+  z-index: 55;
+
+  &:focus {
+    animation: openSearch 0.3s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  // &:not(:focus) {
+  //   animation: closeSearch 0.3s ease-in;
+  //   animation-fill-mode: forwards;
+  // }
+
+  @include m.mq(md) {
+    opacity: 1;
+    width: 100%;
+    padding: 0rem 0.8rem 0rem 3.8rem;
+    font-size: 16px;
+  }
+
+  &::placeholder {
+    color: #b2b2b2;
+  }
+}
+.input-icon {
+  color: #b2b2b2;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include m.mq(md) {
+    width: 1.6rem;
+    height: 1.6rem;
+    left: 1.4rem;
+  }
+}
+
+@keyframes openSearch {
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+// @keyframes closeSearch {
+//   100% {
+//     opacity: 0;
+//     width: 2rem;
+//   }
+// }

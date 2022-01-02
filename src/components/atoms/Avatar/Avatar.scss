@@ -4,6 +4,7 @@
     width: 3.6rem;
     height: 3.6rem;
     border-radius: 50%;
+    border: 1px solid red;
 
     @include m.mq(md) {
         width: 4.2rem;

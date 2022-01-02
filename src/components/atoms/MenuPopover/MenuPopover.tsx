@@ -3,11 +3,10 @@ import { FiChevronDown } from "react-icons/fi";
 import { useRef, useState } from "react";
 
 const options = [
-  "Amigos",
+  "Inicio",
   "Perfil",
-  "Cerrar sesion",
-  "Configuraciones",
-  "Guardados",
+  "Configuración",
+  "Cerrar sesión",
 ];
 
 export const MenuPopover = () => {

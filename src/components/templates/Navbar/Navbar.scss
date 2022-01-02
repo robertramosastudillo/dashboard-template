@@ -26,6 +26,15 @@
   justify-content: space-between;
 }
 
+.navbar-options {
+  margin: 0 2rem 0 0;
+  gap: 1rem;
+  justify-content: flex-end;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
 .burger-menu {
   width: 2.4rem;
   height: 2.4rem;

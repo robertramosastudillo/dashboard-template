@@ -1,6 +1,6 @@
 import "./Navbar.scss";
 import { CgMenu } from "react-icons/cg";
-import { MenuPopover, SearchBox } from "../../atoms";
+import { Avatar, MenuPopover, SearchBox } from "../../atoms";
 
 export const Navbar = () => {
   return (
@@ -8,11 +8,12 @@ export const Navbar = () => {
       <CgMenu className="burger-menu" />
       <div className="navbar-container-items">
         <SearchBox />
-        <div className="options">
+        <div className="navbar-options">
+          <Avatar/>
           <MenuPopover />
         </div>
       </div>
-      {/* <Avatar/> */}
+      
     </div>
   );
 };

@@ -31,7 +31,6 @@
   color: #303030;
   font-size: 14px;
   outline: none;
-  z-index: 55;
 
   &:focus {
     animation: openSearch 0.3s ease-in;
@@ -64,8 +63,8 @@
   transform: translateY(-50%);
 
   @include m.mq(md) {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
     left: 1.4rem;
   }
 }

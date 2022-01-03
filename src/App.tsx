@@ -1,11 +1,7 @@
-import { SidebarList } from "./components/molecules";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 
 function App() {
-  return (
-      // <Dashboard/>
-      <SidebarList/>
-  );
+  return <Dashboard />;
 }
 
 export default App;

@@ -1,11 +1,5 @@
 @use "../../../shared/sass/variables" as v;
 
-.test {
-  background-color: #fafafa;
-  width: 242px;
-  height: 100vh;
-}
-
 .list__item {
   display: flex;
   flex-direction: row;

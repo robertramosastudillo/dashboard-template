@@ -33,10 +33,12 @@ const items: Props[] = [
     Icon: MdOutlineWork,
   },
 ];
-
+// { title }: string
 export const SidebarList = () => {
   return (
-    <div>
+    <div className="sidebar__list">
+      <span className="sidebar__list-title">MAIN MENU</span>
+
       {items.map(({ id, label, Icon }) => (
         <div key={id}>
           <ListItem id={id} label={label} Icon={Icon} />

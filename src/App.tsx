@@ -1,10 +1,10 @@
-import { MenuPopover } from "./components/atoms";
+import { SidebarList } from "./components/molecules";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
-      <Dashboard/>
-      // <MenuPopover/>
+      // <Dashboard/>
+      <SidebarList/>
   );
 }
 

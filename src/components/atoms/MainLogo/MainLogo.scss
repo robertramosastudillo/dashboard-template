@@ -1,0 +1,24 @@
+@use "../../../shared/sass" as m;
+
+.main__logo {
+  display: none;
+
+  @include m.mq(md) {
+    display: block;
+    margin: 4.6rem 0rem 6rem 0rem;
+  }
+
+  @include m.mq(lg) {
+    margin: 2rem 0rem 6rem 0rem;
+  }
+}
+
+.main__logo-title {
+  @include m.mq(md) {
+    font-size: 2rem;
+  }
+
+  @include m.mq(lg) {
+    font-size: 3.6rem;
+  }
+}

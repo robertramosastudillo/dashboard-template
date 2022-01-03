@@ -1,6 +1,6 @@
 @use "../../../shared/sass" as m;
 
-.sidebar__container {
+.sidebar {
   display: none;
 
   @include m.mq(md) {
@@ -8,8 +8,8 @@
     width: 10%;
     min-width: 9rem;
     height: 100vh;
-    background-color: steelblue;//#FAFAFA;
-}
+    background-color: #fafafa;
+  }
 
   @include m.mq(lg) {
     width: 20%;

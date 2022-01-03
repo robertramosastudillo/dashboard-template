@@ -8,7 +8,7 @@ export const SearchBox = () => {
 
   return (
     <div className="searchbox">
-      <input className="searchbox-input" type="text" ref={el} />
+      <input className="searchbox-input" type="text" placeholder="Buscar" ref={el} />
       <FiSearch className="input-icon" onClick={handleSearch} />
     </div>
   );

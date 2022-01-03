@@ -2,7 +2,6 @@
 
 .sidebar {
   display: none;
-  border-right: 1px solid #f1f1f1;;
 
   @include m.mq(md) {
     display: block;
@@ -10,9 +9,35 @@
     min-width: 9rem;
     height: 100vh;
     background-color: #fafafa;
+    border-right: 1px solid #f1f1f1;
   }
 
   @include m.mq(lg) {
     width: 20%;
+  }
+}
+
+.sidebar-active {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  background-color: #fafafa;
+  width: 70%;
+  left: 0;
+
+  @include m.mq(md) {
+    width: 40%;
+  }
+}
+
+.sidebar__shadow {
+  width: 30%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: rgba(#000000, 0.8);
+
+  @include m.mq(md) {
+    width: 60%;
   }
 }

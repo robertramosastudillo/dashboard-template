@@ -48,7 +48,7 @@
   cursor: pointer;
 
   @include m.mq(lg) {
-    width: 80%;
+    // width: 80%;
     display: none;
   }
 }

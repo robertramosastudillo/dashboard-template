@@ -29,7 +29,10 @@ export const Sidebar = () => {
         <SidebarList title="Main" items={mainData} />
         <SidebarList title="Other" items={otherData} />
       </div>
-      <div ref={elSidebarShadow} onClick={()=> dispatch(collapsedMenu)}></div>
+      <div
+        ref={elSidebarShadow}
+        onClick={()=> dispatch(collapsedMenu())}
+      ></div>
     </>
   );
 };

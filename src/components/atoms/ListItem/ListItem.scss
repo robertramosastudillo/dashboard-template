@@ -40,3 +40,15 @@
     display: block;
   }
 }
+
+.list__item-active {
+  @include m.mq(md) {
+    justify-content: flex-start;
+  }
+}
+
+.list__item-title-active {
+  @include m.mq(md) {
+    display: block;
+  }
+}

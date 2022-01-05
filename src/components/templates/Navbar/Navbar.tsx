@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <CgMenu className="burger-menu" onClick={()=> dispatch(collapsedMenu)} />
+      <CgMenu className="burger-menu" onClick={()=> dispatch(collapsedMenu())} />
       <div className="navbar-container-items">
         <SearchBox />
         <div className="navbar-options">

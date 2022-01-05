@@ -1,16 +1,18 @@
 import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { collapsedMenu } from "../../../features/ui/uiSlice";
 import { mainData, otherData } from "../../../shared/assets/data/sidebarList";
 import { MainLogo } from "../../atoms";
 import { SidebarList } from "../../molecules";
 import "./Sidebar.scss";
+import { uiSelector } from "../../../features/ui/uiSelector";
 
-export const Sidebar = ({ isCollapsed, setIsCollapsed }: any) => {
+export const Sidebar = () => {
+  const dispatch = useDispatch();
+  const { isCollapsed } = useSelector(uiSelector);
+
   const el = useRef<HTMLDivElement>(null);
   const elSidebarShadow = useRef<HTMLDivElement>(null);
-
-  console.log(isCollapsed);
-
-  const collapsedMenu = () => setIsCollapsed(!isCollapsed);
 
   if (isCollapsed) {
     el.current?.classList.add("sidebar-active");
@@ -27,7 +29,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: any) => {
         <SidebarList title="Main" items={mainData} />
         <SidebarList title="Other" items={otherData} />
       </div>
-      <div ref={elSidebarShadow} onClick={collapsedMenu}></div>
+      <div ref={elSidebarShadow} onClick={()=> dispatch(collapsedMenu)}></div>
     </>
   );
 };

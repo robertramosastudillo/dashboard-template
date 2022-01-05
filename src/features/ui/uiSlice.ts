@@ -6,11 +6,12 @@ export const uiSlice = createSlice({
   name: "ui",
   initialState,
   reducers: {
-    setAuthSuccess: (state, { payload }: PayloadAction<boolean>) => {
-      state.isUi = payload;
+    collapsedMenu: (state, { payload }: PayloadAction) => {
+        console.log(!state.isCollapsed)
+      state.isCollapsed = !state.isCollapsed;
     },
   },
 });
 
-export const { setAuthSuccess } = uiSlice.actions;
+export const { collapsedMenu } = uiSlice.actions;
 export default uiSlice.reducer;

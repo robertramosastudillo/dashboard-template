@@ -1,13 +1,16 @@
 import "./Navbar.scss";
 import { CgMenu } from "react-icons/cg";
 import { Avatar, MenuPopover, SearchBox } from "../../atoms";
+import { useDispatch } from "react-redux";
+import { collapsedMenu } from "../../../features/ui/uiSlice";
 
-export const Navbar = ({ isCollapsed, setIsCollapsed }: any) => {
-  const collapsedMenu = () => setIsCollapsed(!isCollapsed);
+export const Navbar = () => {
+  
+  const dispatch = useDispatch();
 
   return (
     <div className="navbar-container">
-      <CgMenu className="burger-menu" onClick={collapsedMenu} />
+      <CgMenu className="burger-menu" onClick={()=> dispatch(collapsedMenu)} />
       <div className="navbar-container-items">
         <SearchBox />
         <div className="navbar-options">

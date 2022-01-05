@@ -33,7 +33,7 @@ export const Sidebar = () => {
       </div>
       <div
         ref={elSidebarShadow}
-        onClick={()=> dispatch(collapsedMenu())}
+        onClick={() => dispatch(collapsedMenu())}
       ></div>
     </>
   );

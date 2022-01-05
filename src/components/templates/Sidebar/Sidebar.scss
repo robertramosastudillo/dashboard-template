@@ -2,6 +2,17 @@
 
 .sidebar {
   display: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+    border-radius: 10rem;
+  }
 
   @include m.mq(md) {
     display: block;
@@ -24,8 +35,6 @@
   background-color: #fafafa;
   width: 70%;
   left: 0;
-  overflow-y: scroll;
-
   @include m.mq(md) {
     width: 40%;
   }
@@ -37,7 +46,9 @@
   position: absolute;
   right: 0;
   background-color: rgba(#000000, 0.8);
-  // border: 1px solid blue;
+  animation: openSidebar ease-out 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
   @include m.mq(md) {
     width: 60%;

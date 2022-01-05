@@ -57,12 +57,13 @@
   left: 0.8rem;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 
   @include m.mq(md) {
     width: 1.8rem;
     height: 1.8rem;
     left: 1.4rem;
-    
+    cursor: default;
   }
 }
 

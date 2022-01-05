@@ -28,6 +28,8 @@ export const Sidebar = () => {
         <MainLogo />
         <SidebarList title="Main" items={mainData} />
         <SidebarList title="Other" items={otherData} />
+        <SidebarList title="Other" items={otherData} />
+        <SidebarList title="Other" items={otherData} />
       </div>
       <div
         ref={elSidebarShadow}

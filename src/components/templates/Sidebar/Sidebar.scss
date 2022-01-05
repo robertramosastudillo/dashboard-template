@@ -24,6 +24,7 @@
   background-color: #fafafa;
   width: 70%;
   left: 0;
+  overflow-y: scroll;
 
   @include m.mq(md) {
     width: 40%;
@@ -36,8 +37,18 @@
   position: absolute;
   right: 0;
   background-color: rgba(#000000, 0.8);
+  // border: 1px solid blue;
 
   @include m.mq(md) {
     width: 60%;
+  }
+}
+
+@keyframes openSidebar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -1,13 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../app/rootReducer";
+import { initialState } from "./uiState";
 
-export interface UiState {
-  isUi: boolean;
-}
-
-export const initialState: UiState = {
-    isUi: false,
-};
 
 export const uiSlice = createSlice({
   name: "ui",
@@ -20,5 +13,4 @@ export const uiSlice = createSlice({
 });
 
 export const { setAuthSuccess } = uiSlice.actions;
-export const uiSelector = (state: RootState) => state.ui;
 export default uiSlice.reducer;

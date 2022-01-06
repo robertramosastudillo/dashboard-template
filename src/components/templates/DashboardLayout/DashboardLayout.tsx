@@ -1,4 +1,4 @@
-import { Content, Navbar, Sidebar } from "../";
+import { Content, Navbar, Sidebar } from "../../organisms";
 import "./DashboardLayout.scss";
 
 export const DashboardLayout = ({ children }: any) => {

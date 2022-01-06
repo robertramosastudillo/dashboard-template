@@ -1,0 +1,30 @@
+@use "../../../shared/sass/mixins" as m;
+
+.content {
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+    border-radius: 10rem;
+  }
+
+  overflow-y: scroll;
+  width: 100%;
+  max-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 6rem);
+  padding: 2rem;
+
+  @include m.mq(md) {
+    max-height: calc(100vh - 6.2rem);
+    min-height: calc(100vh - 6.2rem);
+  }
+
+  @include m.mq(lg) {
+    max-height: calc(100vh - 9rem);
+    min-height: calc(100vh - 9rem);
+    padding: 2rem 4rem 4rem 4rem;
+  }
+}

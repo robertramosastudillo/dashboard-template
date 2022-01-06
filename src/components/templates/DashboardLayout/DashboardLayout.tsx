@@ -1,4 +1,4 @@
-import { Navbar, Sidebar } from "../";
+import { Content, Navbar, Sidebar } from "../";
 import "./DashboardLayout.scss";
 
 export const DashboardLayout = ({ children }: any) => {
@@ -10,7 +10,7 @@ export const DashboardLayout = ({ children }: any) => {
       <div className="dashboard__layout-sidebar">
         <Sidebar />
       </div>
-      <div className="dashboard__layout-content">{children}</div>
+      <div className="dashboard__layout-content"><Content children={children} /></div>
     </div>
   );
 };

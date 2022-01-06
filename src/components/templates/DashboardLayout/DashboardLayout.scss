@@ -1,6 +1,7 @@
 @use "../../../shared/sass/mixins" as m;
 
 .dashboard__layout {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -10,7 +11,7 @@
     "content content content";
 
   @include m.mq(md) {
-    grid-template-columns: 0.5fr 2fr 2fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-template-areas:
       "sidebar navbar navbar"
       "sidebar content content"
@@ -18,7 +19,6 @@
   }
 
   @include m.mq(lg) {
-    grid-template-columns: 0.8fr 2fr 2fr;
     grid-template-areas:
       "sidebar navbar navbar"
       "sidebar content content"
@@ -36,14 +36,4 @@
 
 .dashboard__layout-content {
   grid-area: content;
-  min-height: calc(100vh - 6rem);
-  background-color: red;
-
-  @include m.mq(md) {
-    min-height: calc(100vh - 6.2rem);
-  }
-
-  @include m.mq(lg) {
-    min-height: calc(100vh - 9rem);
-  }
 }

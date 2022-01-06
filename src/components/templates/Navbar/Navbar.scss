@@ -10,12 +10,10 @@
 
 
   @include m.mq(md) {
-    width: 90%;
     height: 6.2rem;
   }
 
   @include m.mq(lg) {
-    width: 80%;
     height: 9rem;
   }
 }

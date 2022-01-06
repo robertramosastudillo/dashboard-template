@@ -1,14 +1,49 @@
 @use "../../../shared/sass/mixins" as m;
 
 .dashboard__layout {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "content content content"
+    "content content content";
 
-    @include m.mq(md) {
-        flex-direction: row-reverse;
-    }
+  @include m.mq(md) {
+    grid-template-columns: 0.5fr 2fr 2fr;
+    grid-template-areas:
+      "sidebar navbar navbar"
+      "sidebar content content"
+      "sidebar content content";
+  }
 
-    @include m.mq(lg) {
-        flex-direction: row-reverse;
-    }
+  @include m.mq(lg) {
+    grid-template-columns: 0.8fr 2fr 2fr;
+    grid-template-areas:
+      "sidebar navbar navbar"
+      "sidebar content content"
+      "sidebar content content";
+  }
+}
+
+.dashboard__layout-navbar {
+  grid-area: navbar;
+}
+
+.dashboard__layout-sidebar {
+  grid-area: sidebar;
+}
+
+.dashboard__layout-content {
+  grid-area: content;
+  min-height: calc(100vh - 6rem);
+  background-color: red;
+
+  @include m.mq(md) {
+    min-height: calc(100vh - 6.2rem);
+  }
+
+  @include m.mq(lg) {
+    min-height: calc(100vh - 9rem);
+  }
 }

@@ -1,6 +1,10 @@
-import { DashboardLayout } from "../../components/templates";
 import "./Dashboard.scss";
+import { DashboardLayout } from "../../components/templates";
 
 export const Dashboard = () => {
-  return <DashboardLayout></DashboardLayout>;
+  return (
+    <DashboardLayout>
+     <p>Dimelo</p>
+    </DashboardLayout>
+  );
 };

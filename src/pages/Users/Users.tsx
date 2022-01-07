@@ -1,9 +1,10 @@
+import { DashboardLayout } from "../../components/templates";
 import "./Users.scss";
 
 export const Users = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <DashboardLayout>
+      <h1>Users</h1>
+    </DashboardLayout>
+  );
+};

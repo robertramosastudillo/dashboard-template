@@ -3,11 +3,14 @@ import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./app/store";
-import { AppRouter } from "./routes";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./routes/AppRouter";
 
 ReactDOM.render(
   <Provider store={store}>
-    <AppRouter />
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );

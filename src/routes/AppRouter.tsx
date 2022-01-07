@@ -1,17 +1,31 @@
-import { Routes, Route } from "react-router-dom";
-import { Dashboard } from "../pages/Dashboard/Dashboard";
-import { Home } from "../pages/Home/Home";
-import { Login } from "../pages/Login/Login";
-import { NotFound } from "../pages/NotFound/NotFound";
+import { useRoutes, Navigate } from "react-router-dom";
+import { DashboardLayout, PublicLayout } from "../components/templates";
+import { Dashboard, Home, Login, NotFound, Products, Users } from "../pages";
 
 export const AppRouter = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="dashboard/*" element={<Dashboard />}></Route>
-      <Route path="login" element={<Login />}></Route>
+  const routes = useRoutes([
+    {
+      path: "",
+      element: <PublicLayout />,
+      children: [
+        { path: "", element: <Home /> },
+        { path: "login", element: <Login /> },
+        { path: "404", element: <NotFound /> },
+        { path: "*", element: <Navigate to="/404" /> },
+      ],
+    },
+    {
+      path: "dashboard",
+      element: <DashboardLayout />,
+      children: [
+        { path: "", element: <Dashboard /> },
+        { path: "users", element: <Users /> },
+        { path: "products", element: <Products /> },
+      ],
+    },
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
+    { path: "*", element: <Navigate to="/404" replace /> },
+  ]);
+
+  return routes;
 };

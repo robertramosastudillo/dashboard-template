@@ -1,16 +1,17 @@
 import { useRef } from "react";
 import "./SidebarList.scss";
 import { ListItem } from "../../atoms";
-import { ISidebarList } from "../../../shared/assets/data/sidebarList";
 import { useSelector } from "react-redux";
 import { uiSelector } from "../../../features/ui/uiSelector";
+import { IAppRouteList } from "../../../routes/routeList";
 
 interface Props {
-  title: string;
-  items: ISidebarList[];
+  appRouteList: IAppRouteList;
 }
 
-export const SidebarList = ({ title, items }: Props) => {
+export const SidebarList = ({ appRouteList }: Props) => {
+  const { title, routelist } = appRouteList;
+
   const el = useRef<HTMLSpanElement>(null);
 
   const { isCollapsed } = useSelector(uiSelector);
@@ -22,11 +23,13 @@ export const SidebarList = ({ title, items }: Props) => {
 
   return (
     <div className="sidebar__list">
-      <span className="sidebar__list-title" ref={el}>{title}</span>
+      <span className="sidebar__list-title" ref={el}>
+        {title}
+      </span>
 
-      {items.map(({ id, label, Icon }) => (
-        <div key={id}>
-          <ListItem id={id} label={label} Icon={Icon} />
+      {routelist.map(({ Icon, label, to }) => (
+        <div key={label}>
+          <ListItem label={label} Icon={Icon} to={to} />
         </div>
       ))}
     </div>

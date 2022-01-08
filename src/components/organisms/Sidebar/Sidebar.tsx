@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { collapsedMenu } from "../../../features/ui/uiSlice";
-import { mainData, otherData } from "../../../shared/assets/data/sidebarList";
+import { dashboardList, settingList } from "../../../routes/routeList";
 import { MainLogo } from "../../atoms";
 import { SidebarList } from "../../molecules";
 import "./Sidebar.scss";
@@ -26,10 +26,8 @@ export const Sidebar = () => {
     <>
       <div className="sidebar" ref={el}>
         <MainLogo />
-        <SidebarList title="Main" items={mainData} />
-        <SidebarList title="Other" items={otherData} />
-        <SidebarList title="Other" items={otherData} />
-        <SidebarList title="Other" items={otherData} />
+        <SidebarList appRouteList={dashboardList} />
+        <SidebarList appRouteList={settingList} />
       </div>
       <div
         ref={elSidebarShadow}

@@ -9,19 +9,18 @@ export const AppRouter = () => {
       element: <PublicLayout />,
       children: [
         { path: "", element: <Home /> },
-        { path: "login", element: <Login /> },
+        { path: "iniciar-sesion", element: <Login /> },
         { path: "404", element: <NotFound /> },
-        { path: "*", element: <Navigate to="/404" /> },
       ],
     },
     {
-      path: "dashboard",
+      path: "app",
       element: <DashboardLayout />,
       children: [
         { path: "", element: <Dashboard /> },
-        { path: "users", element: <Users /> },
-        { path: "products", element: <Products /> },
-        { path: "categories", element: <Categories /> },
+        { path: "usuarios", element: <Users /> },
+        { path: "productos", element: <Products /> },
+        { path: "categorias", element: <Categories /> },
       ],
     },
 

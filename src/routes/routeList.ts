@@ -24,17 +24,17 @@ export const generalList: IAppRouteList = {
     {
       Icon: BsFillPeopleFill,
       label: "Usuarios",
-      to: "users",
+      to: "usuarios",
     },
     {
       Icon: BsInboxesFill,
       label: "Productos",
-      to: "products",
+      to: "productos",
     },
     {
       Icon: MdCategory,
       label: "Categorias",
-      to: "categories",
+      to: "categorias",
     },
   ],
 };
@@ -50,7 +50,7 @@ export const settingList: IAppRouteList = {
     {
       Icon: BsFillPeopleFill,
       label: "Usuarios",
-      to: "users",
+      to: "usuarios",
     },
   ],
 };

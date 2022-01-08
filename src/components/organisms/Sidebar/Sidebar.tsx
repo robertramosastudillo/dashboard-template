@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { collapsedMenu } from "../../../features/ui/uiSlice";
-import { dashboardList, settingList } from "../../../routes/routeList";
+import { generalList, settingList } from "../../../routes/routeList";
 import { MainLogo } from "../../atoms";
 import { SidebarList } from "../../molecules";
 import "./Sidebar.scss";
@@ -26,7 +26,7 @@ export const Sidebar = () => {
     <>
       <div className="sidebar" ref={el}>
         <MainLogo />
-        <SidebarList appRouteList={dashboardList} />
+        <SidebarList appRouteList={generalList} />
         <SidebarList appRouteList={settingList} />
       </div>
       <div

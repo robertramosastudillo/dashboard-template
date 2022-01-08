@@ -13,8 +13,8 @@ export interface IAppRouteList {
   routelist: IRouteList[];
 }
 
-export const dashboardList: IAppRouteList = {
-  title: "Dashboard",
+export const generalList: IAppRouteList = {
+  title: "General",
   routelist: [
     {
       Icon: MdDashboard,

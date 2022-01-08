@@ -12,8 +12,8 @@ interface Props {
 }
 
 export const ListItem = ({ Icon, label, to }: Props) => {
-  const el = useRef<HTMLDivElement>(null);
-  const elTitle = useRef<HTMLAnchorElement>(null);
+  const el = useRef<HTMLAnchorElement>(null);
+  const elTitle = useRef<HTMLSpanElement>(null);
   const { isCollapsed } = useSelector(uiSelector);
 
   if (isCollapsed) {
@@ -25,11 +25,11 @@ export const ListItem = ({ Icon, label, to }: Props) => {
   }
 
   return (
-    <div key={label} className="list__item" ref={el}>
+    <Link key={label} className="list__item" to={to} ref={el}>
       <Icon className="list__item-icon" />
-      <Link className="list__item-title" ref={elTitle} to={to}>
+      <span className="list__item-title" ref={elTitle}>
         {label}
-      </Link>
-    </div>
+      </span>
+    </Link>
   );
 };

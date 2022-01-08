@@ -21,6 +21,10 @@
   @include m.mq(lg) {
     justify-content: flex-start;
   }
+
+  @include m.mq(ll) {
+    padding: 1.6rem 8rem 1.6rem 3.6rem;
+  }
 }
 
 .list__item-icon {

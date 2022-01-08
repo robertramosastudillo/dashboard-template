@@ -2,7 +2,7 @@
 @use "../../../shared/sass/mixins" as m;
 
 .sidebar__list {
-  margin: 3.6rem 0;
+  margin: 2rem 0;
 }
 
 .sidebar__list-title {
@@ -16,17 +16,18 @@
   text-transform: uppercase;
 
   @include m.mq(md) {
-    text-align: center;
-    padding: 0 3.6rem;
+    display: none;
   }
 
   @include m.mq(lg) {
+    display: block;
     text-align: left;
   }
 }
 
 .sidebar__list-title-active {
   @include m.mq(md) {
+    display: block;
     text-align: left;
   }
 }

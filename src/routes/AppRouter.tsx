@@ -1,6 +1,6 @@
 import { useRoutes, Navigate } from "react-router-dom";
 import { DashboardLayout, PublicLayout } from "../components/templates";
-import { Dashboard, Home, Login, NotFound, Products, Users } from "../pages";
+import { Categories, Dashboard, Home, Login, NotFound, Products, Users } from "../pages";
 
 export const AppRouter = () => {
   const routes = useRoutes([
@@ -21,6 +21,7 @@ export const AppRouter = () => {
         { path: "", element: <Dashboard /> },
         { path: "users", element: <Users /> },
         { path: "products", element: <Products /> },
+        { path: "categories", element: <Categories /> },
       ],
     },
 

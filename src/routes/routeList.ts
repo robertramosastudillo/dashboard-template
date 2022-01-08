@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { MdDashboard } from "react-icons/md";
+import { BsFillPeopleFill, BsInboxesFill } from "react-icons/bs";
+import { MdDashboard, MdCategory } from "react-icons/md";
 
 export interface IRouteList {
   label: string;
@@ -19,28 +19,38 @@ export const dashboardList: IAppRouteList = {
     {
       Icon: MdDashboard,
       label: "Dashboard",
-      to: "dashboard",
+      to: "",
     },
     {
       Icon: BsFillPeopleFill,
       label: "Usuarios",
-      to: "dashbord/users",
+      to: "users",
+    },
+    {
+      Icon: BsInboxesFill,
+      label: "Productos",
+      to: "products",
+    },
+    {
+      Icon: MdCategory,
+      label: "Categorias",
+      to: "categories",
     },
   ],
 };
 
 export const settingList: IAppRouteList = {
-    title: "Configuración",
-    routelist: [
-      {
-        Icon: MdDashboard,
-        label: "Dashboard",
-        to: "dashboard",
-      },
-      {
-        Icon: BsFillPeopleFill,
-        label: "Usuarios",
-        to: "dashbord/users",
-      },
-    ],
-  };
+  title: "Configuración",
+  routelist: [
+    {
+      Icon: MdDashboard,
+      label: "Dashboard",
+      to: "",
+    },
+    {
+      Icon: BsFillPeopleFill,
+      label: "Usuarios",
+      to: "users",
+    },
+  ],
+};

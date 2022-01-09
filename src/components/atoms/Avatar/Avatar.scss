@@ -1,19 +1,9 @@
 @use "../../../shared/sass/mixins" as m;
 
-.avatar__container {
-  width: 3.6rem;
-  height: 3.6rem;
-
-  @include m.mq(md) {
-    width: 4.2rem;
-    height: 4.2rem;
-  }
-}
-
 .avatar {
   width: 100%;
   border-radius: 50%;
   display: flex;
-  background: steelblue; // Temporal
+  background: #dedede;
   cursor: pointer;
 }

@@ -5,16 +5,20 @@ import { useDispatch } from "react-redux";
 import { collapsedMenu } from "../../../features/ui/uiSlice";
 
 export const Navbar = () => {
-  
   const dispatch = useDispatch();
 
   return (
     <div className="navbar-container">
-      <CgMenu className="burger-menu" onClick={()=> dispatch(collapsedMenu())} />
+      <CgMenu
+        className="burger-menu"
+        onClick={() => dispatch(collapsedMenu())}
+      />
       <div className="navbar-container-items">
         <SearchBox />
         <div className="navbar-options">
-          <Avatar />
+          <div className="avatar__container">
+            <Avatar />
+          </div>
           <MenuPopover />
         </div>
       </div>

@@ -4,20 +4,22 @@ import "./FormLogin.scss";
 export const FormLogin = () => {
   return (
     <div className="form__login">
-      <div className="form__avatar-container">
-        <div className="form__avatar">
-          <Avatar />
+      <div className="form_login-container">
+        <div className="form__avatar-container">
+          <div className="form__avatar">
+            <Avatar />
+          </div>
         </div>
+
+        <h4 className="form__login-title">Iniciar Sesión</h4>
+
+        <form className="form">
+          <TextBox type="email" label="Correo electrónico" />
+          <TextBox type="password" label="Contraseña" />
+          <CheckBox label="Recuérdame" />
+          <Button label="Continuar" />
+        </form>
       </div>
-
-      <h4 className="form__login-title">Iniciar Sesión</h4>
-
-      <form className="form">
-        <TextBox type="email" label="Correo electrónico" />
-        <TextBox type="password" label="Contraseña" />
-        <CheckBox label="Recuérdame" />
-        <Button label="Continuar" />
-      </form>
     </div>
   );
 };

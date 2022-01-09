@@ -1,13 +1,21 @@
 @use "../../../shared/sass/mixins" as m;
 
 .form__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40rem;
-  margin: 0 auto;
   padding: 4rem;
+  height: auto;
+  min-height: 100vh;
 
   @include m.mq(md) {
     width: 60rem;
   }
+}
+
+.form_login-container {
+  width: 100%;
 }
 
 .form__avatar {

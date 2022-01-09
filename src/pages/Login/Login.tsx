@@ -4,7 +4,10 @@ import "./Login.scss";
 export const Login = () => {
   return (
     <div className="login">
-      <FormLogin />
+      <div className="login__banner">
+        <div className="login__banner-ilustration"></div>
+      </div>
+        <FormLogin />
     </div>
   );
 };

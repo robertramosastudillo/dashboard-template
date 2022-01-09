@@ -1,8 +1,31 @@
+@use "../../shared/sass/mixins" as m;
+
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  border: 1px solid blue;
 }
+
+.login__banner {
+  display: none;
+
+  @include m.mq(lg) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+.login__banner-ilustration {
+  @include m.mq(lg) {
+    background-image: url("../../shared/assets/svgs/login.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+

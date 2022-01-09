@@ -1,0 +1,35 @@
+.checkbox {
+  border: 1px solid red;
+  margin-bottom: 1.5rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: #d5d5d5;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+label {
+    color: #4c4c4c;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:after {
+    // content: 'R';
+    // font-size: 1.6rem;
+    // color: white;
+    // display: none;
+}
+
+input[type="checkbox"]:hover {
+    background-color: #a5a5a5;
+}
+
+input[type="checkbox"]:checked {
+    background-color: red;
+}

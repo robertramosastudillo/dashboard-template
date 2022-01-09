@@ -1,6 +1,38 @@
+@use "../../../shared/sass/mixins" as m;
+
 .form__login {
-    width: 40rem;
-    margin: 0 auto;
-    padding: 4rem;
-    border: 1px solid red;
+  width: 40rem;
+  margin: 0 auto;
+  padding: 4rem;
+
+  @include m.mq(md) {
+    width: 60rem;
+  }
+}
+
+.form__avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.form__login-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.form {
+  margin: 2rem auto;
+}
+
+.form__avatar-container {
+  display: flex;
+  justify-content: center;
+}
+.form__avatar {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
 }

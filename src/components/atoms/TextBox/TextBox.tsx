@@ -8,7 +8,7 @@ interface Props {
 export const TextBox = ({ type = 'text', label }: Props) => {
   return (
     <>
-      <div className="form__div">
+      <div className="form__group">
         <input type={type} className="form__input" placeholder=" " />
         <label htmlFor="" className="form__label">
           {label}

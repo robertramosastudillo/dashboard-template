@@ -1,3 +1,5 @@
+export { CheckBox } from "./CheckBox/CheckBox";
+export { Button } from "./Button/Button";
 export { TextBox } from "./TextBox/TextBox";
 export { ListItem } from "./ListItem/ListItem";
 export { MainLogo } from "./MainLogo/MainLogo";

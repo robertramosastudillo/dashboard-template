@@ -6,7 +6,6 @@ export const uiSlice = createSlice({
   initialState,
   reducers: {
     collapsedMenu: (state, { payload }: PayloadAction) => {
-      console.log(state.isCollapsed)
       state.isCollapsed = !state.isCollapsed;
     },
   },

@@ -1,10 +1,19 @@
 import "./TextBox.scss";
 
-export const TextBox = () => {
+interface Props {
+  type?: string;
+  label: string;
+}
+
+export const TextBox = ({ type = 'text', label }: Props) => {
   return (
-    <div className="form__group">
-      <label htmlFor="email">Correo Electronico</label>
-      <input type="email" placeholder="Ingresa tu correo electronico" />
-    </div>
+    <>
+      <div className="form__div">
+        <input type={type} className="form__input" placeholder=" " />
+        <label htmlFor="" className="form__label">
+          {label}
+        </label>
+      </div>
+    </>
   );
 };

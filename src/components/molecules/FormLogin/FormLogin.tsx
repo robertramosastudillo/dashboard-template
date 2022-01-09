@@ -15,8 +15,8 @@ export const FormLogin = () => {
       <form className="form">
         <TextBox type="email" label="Correo electrónico" />
         <TextBox type="password" label="Contraseña" />
-        <CheckBox />
-        <Button />
+        <CheckBox label="Recuérdame" />
+        <Button label="Continuar" />
       </form>
     </div>
   );

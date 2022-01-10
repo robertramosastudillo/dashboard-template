@@ -6,7 +6,7 @@ export const Users = () => {
     <div className="users">
       <h2 className="users__title">Usuarios</h2>
 
-      <Table/>
+      <Table />
     </div>
   );
 };

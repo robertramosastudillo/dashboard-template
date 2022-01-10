@@ -1,5 +1,9 @@
 import "./Users.scss";
 
 export const Users = () => {
-  return <h1>Users</h1>;
+  return (
+    <div className="users">
+      <h2 className="users__title">Usuarios</h2>
+    </div>
+  );
 };

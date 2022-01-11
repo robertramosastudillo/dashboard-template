@@ -1,0 +1,72 @@
+@use "../../../shared/sass/mixins" as m;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  @include m.mq(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.table__thead {
+  @include m.mq(sm) {
+    display: none;
+  }
+}
+
+.table__thead-tr {
+  &:nth-child(even) {
+    background: #f4f4f4;
+    border-radius: 4px;
+  }
+  @include m.mq(sm) {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.table__thead-th {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #ff2e00;
+  color: #fff;
+}
+
+.table__tbody {
+  @include m.mq(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.table__tbody-td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    @include m.mq(sm) {
+      display: block;
+      width: 100%;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+      &:before {
+        // content: "${(props) => props.label}";
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+      }
+      &:last-child {
+        border-radius: 0px 0px 4px 4px;
+      }
+      &:first-child {
+        border-radius: 4px 4px 0px 0px;
+      }
+    }
+}

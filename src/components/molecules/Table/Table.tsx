@@ -22,24 +22,29 @@ export const Table = () => {
 
   return (
     <>
-      <table {...getTableProps()}>
-        <thead>
+      <table className="table" {...getTableProps()}>
+        <thead className="table__thead">
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <tr
+              className="table__thead-tr"
+              {...headerGroup.getHeaderGroupProps()}
+            >
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <th className="table__thead-th" {...column.getHeaderProps()}>
+                  {column.render("Header")}
+                </th>
               ))}
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()}>
+        <tbody className="table__tbody" {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr className="table__thead-tr" {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td className="table__tbody-td" {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   );
                 })}
               </tr>

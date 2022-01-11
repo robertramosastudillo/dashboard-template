@@ -1,72 +1,64 @@
 @use "../../../shared/sass/mixins" as m;
-.table {
-  width: 100%;
-  border-collapse: collapse;
 
-  @include m.mq(sm) {
-    display: block;
-    width: 100%;
-  }
+body{
+	margin:0;
+	padding:20px;
+	font-family: sans-serif;
 }
 
-.table__thead {
-  @include m.mq(sm) {
-    display: none;
-  }
+*{
+	box-sizing: border-box;
 }
 
-.table__thead-tr {
-  &:nth-child(even) {
-    background: #f4f4f4;
-    border-radius: 4px;
-  }
-  @include m.mq(sm) {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+.table{
+	width: 100%;
+	border-collapse: collapse;
 }
 
-.table__thead-th {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
+.table td,.table th{
+  padding:12px 15px;
+  border:1px solid #ddd;
   text-align: center;
-  background: #ff2e00;
-  color: #fff;
+  font-size:16px;
 }
 
-.table__tbody {
-  @include m.mq(sm) {
-    display: block;
-    width: 100%;
-  }
+.table th{
+	background-color: darkblue;
+	color:#ffffff;
 }
 
-.table__tbody-td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    @include m.mq(sm) {
-      display: block;
-      width: 100%;
-      text-align: right;
-      padding-left: 50%;
-      position: relative;
-      &:before {
-        // content: "${(props) => props.label}";
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: left;
-      }
-      &:last-child {
-        border-radius: 0px 0px 4px 4px;
-      }
-      &:first-child {
-        border-radius: 4px 4px 0px 0px;
-      }
-    }
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+
+/*responsive*/
+
+@media(max-width: 500px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
 }

@@ -1,9 +1,5 @@
-import styles from "./Button.module.scss";
+import { CustomButton } from "./Button.style";
 
 export const Button = ({ label }: any) => {
-  return (
-    <button className={styles.button} type="button">
-      {label}
-    </button>
-  );
+  return <CustomButton type="button">{label}</CustomButton>;
 };

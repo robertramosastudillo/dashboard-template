@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useTable } from "react-table";
 import MOCK_DATA from "../../../shared/MOCK_DATA.json";
 import { COLUMNS } from "../../../shared/columns";
-import styles from "./Table.module.scss";
+import { TableList, Thead, Th, Tbody, Tr, Td } from "./Table.style";
 
 export const Table = () => {
   const columns: any = useMemo(() => COLUMNS, []);
@@ -14,35 +14,35 @@ export const Table = () => {
       data,
     });
 
-  // console.log(columns["Header"]);
-
   return (
     <>
-      <table className={styles.table} {...getTableProps()}>
-        <thead className={styles.table__thead}>
+      <TableList {...getTableProps()}>
+        <Thead>
           {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+            <Tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <Th {...column.getHeaderProps()}>{column.render("Header")}</Th>
               ))}
-            </tr>
+            </Tr>
           ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
+        </Thead>
+        <Tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <Tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <Td {...cell.getCellProps()}>
+                      {cell.render("Cell")}
+                    </Td>
                   );
                 })}
-              </tr>
+              </Tr>
             );
           })}
-        </tbody>
-      </table>
+        </Tbody>
+      </TableList>
     </>
   );
 };

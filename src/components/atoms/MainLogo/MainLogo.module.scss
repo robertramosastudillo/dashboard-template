@@ -12,7 +12,7 @@
   }
 }
 
-.main__logo-title {
+.main__logo_title {
   font-size: 3rem;
 
   @include m.mq(md) {
@@ -24,7 +24,7 @@
   }
 }
 
-.main__logo-title-active {
+.main__logo_title_active {
   @include m.mq(md) {
     font-size: 3.6rem;
   }

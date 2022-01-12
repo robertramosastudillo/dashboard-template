@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useTable } from "react-table";
 import MOCK_DATA from "../../../shared/MOCK_DATA.json";
 import { COLUMNS } from "../../../shared/columns";
-import "./Table.scss";
+import styles from "./Table.module.scss";
 
 export const Table = () => {
   const columns: any = useMemo(() => COLUMNS, []);
@@ -14,30 +14,25 @@ export const Table = () => {
       data,
     });
 
-    console.log(columns['Header']);
+  // console.log(columns["Header"]);
 
   return (
     <>
-      <table className="table" {...getTableProps()}>
-        <thead className="table__thead">
+      <table className={styles.table} {...getTableProps()}>
+        <thead className={styles.table__thead}>
           {headerGroups.map((headerGroup) => (
-            <tr
-              className="table__thead-tr"
-              {...headerGroup.getHeaderGroupProps()}
-            >
+            <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th className="table__thead-th" {...column.getHeaderProps()}>
-                  {column.render("Header")}
-                </th>
+                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
               ))}
             </tr>
           ))}
         </thead>
-        <tbody className="table__tbody" {...getTableBodyProps()}>
+        <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <tr className="table__thead-tr" {...row.getRowProps()}>
+              <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>

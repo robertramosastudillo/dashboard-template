@@ -1,1 +1,1 @@
-# Dashboard Template
+# Dashboard Template Client
